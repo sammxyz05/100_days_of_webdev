@@ -1,0 +1,160 @@
+/* 1. Import a clean, modern sans-serif font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/* 2. Define your color palette as CSS Variables */
+:root {
+    /* Main UI Colors */
+    --header-purple: #3f1e96;
+    --btn-pink: #f26284;
+
+    /* Text Colors */
+    --text-dark: #1b263b;
+    --text-muted: #748296;
+
+    /* Background Gradient Colors */
+    --bg-gradient-top: #dcebff;
+    --bg-gradient-bottom: #f2f7fd;
+
+    /* Social Media Brand Colors */
+    --social-fb: #4267B2;
+    --social-tw: #1DA1F2;
+    --social-li: #0077b5;
+}
+
+/* 3. Global CSS Reset & Box-Sizing */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 4. Base Body Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-dark);
+    background: linear-gradient(to bottom, var(--bg-gradient-top), var(--bg-gradient-bottom));
+    min-height: 100vh;
+}
+
+
+/* 1. The Header Background */
+header {
+    background-color: var(--header-purple);
+    /* Using the CSS variable we defined! */
+    padding: 15px 0;
+    /* Gives it some breathing room on top and bottom */
+}
+
+/* 2. The Main Nav Container */
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* This pushes the Logo to the far left, and the links to the far right */
+    align-items: center;
+    /* This ensures the logo and the links are vertically centered with each other */
+    padding: 0 5%;
+    /* Gives some spacing on the left and right sides of the screen */
+}
+
+/* 3. The List of Links */
+.nav-items {
+    display: flex;
+    /* Makes the list items sit horizontally */
+    align-items: center;
+    /* Vertically centers the items */
+    gap: 30px;
+    /* Creates perfectly even spacing between each link */
+    list-style: none;
+    /* Removes the default HTML bullet points */
+}
+
+/* 4. The Individual Links */
+.nav-items a {
+    color: white;
+    text-decoration: none;
+    /* Removes the standard link underline */
+    font-size: 0.85rem;
+    font-weight: 700;
+    /* Makes the text bold */
+    letter-spacing: 1px;
+    /* Spreads the letters out slightly to match the design */
+}
+
+/* 5. The Pink "Buy Now" Button */
+.btn-buy {
+    background-color: var(--btn-pink);
+    padding: 10px 20px;
+    /* 10px top/bottom, 20px left/right */
+    border-radius: 4px;
+    /* Slightly rounds the corners */
+}
+
+/* 1. The Hero Container */
+.hero {
+    text-align: center;
+    /* Centers all the text inside this section */
+    padding: 100px 20px 80px 20px;
+    /* Large top padding to push it down from the header */
+}
+
+/* 2. The Main Headline */
+.hero h1 {
+    font-size: 3.5rem;
+    /* Makes the text nice and big */
+    color: var(--text-dark);
+    /* Uses the dark navy variable we defined earlier */
+    margin-bottom: 20px;
+    /* Creates space between the title and the paragraph */
+    letter-spacing: -1px;
+    /* Tucks the letters slightly closer together for a modern look */
+}
+
+/* 3. The Subtitle Paragraph */
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    /* Uses the greyish-blue variable */
+    line-height: 1.6;
+    /* Increases the space between the lines of text for readability */
+    font-weight: 300;
+    /* Uses the light font weight we imported from Google Fonts */
+}
+
+/* Update the existing .logo container styles from before */
+.logo {
+    display: flex;
+    align-items: center;
+    /* Vertically centers the small icon and the text */
+    gap: 15px;
+    /* Gives nice spacing between the icon and the text */
+}
+
+/* 1. Add specific rules for the logo image within .logo */
+.logo img {
+    max-width: 50px;
+    /* Set a explicit maximum width for the icon */
+    max-height: 50px;
+    /* Set a explicit maximum height for the icon */
+    width: auto;
+    /* Let the width adjust automatically based on height... */
+    height: auto;
+    /* ...and vice versa to keep aspect ratio perfect */
+
+    /* Best practice: prevents any stretching and keeps the image crisp */
+    object-fit: cover;
+
+    /* If the image isn't already round, you can make it round with: */
+    /* border-radius: 50%; */
+}
+
+/* 2. Update the text size to match the small icon size */
+.logo h2 {
+    color: white;
+    font-size: 1.25rem;
+    /* Sized to sit nicely next to a 50px icon */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+}
