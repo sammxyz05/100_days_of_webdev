@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DMC - Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="auth-body">
+
+    <div class="auth-card">
+        <a href="index.html" class="back-home">&larr; Back to Shop</a>
+        <div class="logo auth-logo">
+            <i class="fa-solid fa-fire-flame-curved"></i> Stride<span>DMC</span>
+        </div>
+        <h2>Join the Agency</h2>
+        <p class="auth-subtitle">Enlist today to receive elite demon hunting privileges.</p>
+
+        <form class="auth-form">
+            <div class="input-row">
+                <div class="input-group">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" placeholder="Dante" required>
+                </div>
+                <div class="input-group">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" placeholder="Sparda" required>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="dante@devilnevercry.com" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Minimum 8 characters" required>
+            </div>
+            <label class="remember-me terms">
+                <input type="checkbox" required> I agree to the Terms of the Underworld and Privacy Policy.
+            </label>
+            <button type="submit" class="btn-primary auth-submit">Create Hunter Profile</button>
+        </form>
+
+        <p class="auth-switch">Already registered? <a href="login.html">Log In</a></p>
+    </div>
+
+</body>
+
+</html>
